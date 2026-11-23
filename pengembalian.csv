@@ -1,0 +1,2 @@
+id_pengembalian,id_transaksi,tanggal_rencana,tanggal_realisasi,terlambat_hari,denda,kondisi,catatan
+RET0001,TRX0001,2026-11-22,2026-11-24,2,40000,Baik,Baju lengkap

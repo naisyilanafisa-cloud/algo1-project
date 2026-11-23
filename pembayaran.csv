@@ -1,0 +1,3 @@
+id_pembayaran,id_transaksi,tanggal,metode,jumlah_bayar,keterangan
+PAY0001,TRX0001,2026-11-18 15:35,Tunai,100000,DP/Angsuran
+PAY0002,TRX0001,2026-11-19 10:00,Transfer,170000,Pelunasan

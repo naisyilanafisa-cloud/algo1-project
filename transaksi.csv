@@ -1,0 +1,2 @@
+id_transaksi,username,nik,nama_penyewa,no_hp,kode_baju,nama_baju,jumlah,tanggal_mulai,tanggal_selesai,lama_sewa,harga_per_hari,subtotal,diskon,total_bayar,status,tanggal_transaksi,denda,tanggal_pengembalian
+TRX0001,andrea01,3501234567890123,Andrea Putra,081234567890,BA001,Baju Adat Bali,2,2026-11-20,2026-11-22,3,50000,300000,30000,270000,RESERVASI,2026-11-18 15:30,0,
