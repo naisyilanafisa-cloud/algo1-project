@@ -260,15 +260,14 @@ def tampilkan_pelanggan(data=None):
 def tambah_pelanggan_admin():
     print("\n=== TAMBAH PELANGGAN ===")
     users = baca_csv(FILE_USERS)
-    nik, nama = input_wajib("NIK (16 digit): "), input_wajib("Nama lengkap : ").title()
+    nama = input_wajib("Nama lengkap : ").title()
     hp, almt = input_wajib("No. HP       : "), input_wajib("Alamat       : ")
     u, p = input_wajib("Username     : ").lower(), input_wajib("Password     : ")
-    if not (nik.isdigit() and len(nik) == 16): return print("NIK harus 16 digit angka.")
     if not (hp.isdigit() and hp.startswith("08") and 10 <= len(hp) <= 13): return print("Nomor HP tidak valid.")
     for x in users:
-        if x["nik"] == nik or x["username"] == u:
-            return print("NIK atau username sudah terdaftar.")
-    users.append({"username": u, "password": p, "nik": nik, "nama_lengkap": nama, "no_hp": hp, "alamat": almt, "role": "pelanggan"})
+        if x["username"] == u:
+            return print("Username sudah digunakan.")
+    users.append({"username": u, "password": p, "nik": "", "nama_lengkap": nama, "no_hp": hp, "alamat": almt, "role": "pelanggan"})
     simpan_csv(FILE_USERS, users)
     print("Pelanggan berhasil ditambahkan.")
 

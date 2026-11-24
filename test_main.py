@@ -133,7 +133,7 @@ class TestSistemPenyewaan(unittest.TestCase):
 
     # --- 5. Pelanggan CRUD (Admin) Tests ---
     def test_tambah_pelanggan_admin(self):
-        inputs = ["1122334455667788", "Siti Aminah", "081298765432", "Bandung", "siti01", "siti123"]
+        inputs = ["Siti Aminah", "081298765432", "Bandung", "siti01", "siti123"]
         with patch("builtins.input", side_effect=inputs):
             main.tambah_pelanggan_admin()
         users = main.baca_csv(main.FILE_USERS)
@@ -804,7 +804,7 @@ class TestSistemPenyewaan(unittest.TestCase):
             "username": "budi01", "password": "p", "nik": "3501234567890001",
             "nama_lengkap": "Budi", "no_hp": "0812", "alamat": "J", "role": "pelanggan"
         }])
-        with patch("builtins.input", side_effect=["3501234567890001", "X", "081234567890", "A", "baru", "p"]), redirect_stdout(io.StringIO()):
+        with patch("builtins.input", side_effect=["X", "081234567890", "A", "budi01", "p"]), redirect_stdout(io.StringIO()):
             main.tambah_pelanggan_admin()
         self.assertEqual(len(main.baca_csv(main.FILE_USERS)), 1)
 
